@@ -7,6 +7,6 @@ let sch= new mongos.Schema({
 }
 )
 
-let model=mongos.model("newreact",sch);
+let model=mongos.model("details",sch);
 
 module.exports=model;

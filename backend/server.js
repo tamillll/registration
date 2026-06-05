@@ -6,9 +6,10 @@ let data = require("./model/db");
 //  mongodb+srv://tamil:epD1IJcXhAbD8NEj@cluster0.a4x0r8e.mongodb.net/newreactdata?appName=Cluster0
 
 // mongodb+srv://tamil:epD1IJcXhAbD8NEj@cluster0.a4x0r8e.mongodb.net/newreactdata
-mongoose.connect("mongodb://tamil:epD1IJcXhAbD8NEj@cluster0.a4x0r8e.mongodb.net/newreactdata");
+
+mongoose.connect("mongodb://tamil:bwP7LkhWXewtZd5D@ac-wlrzh8k-shard-00-00.a4x0r8e.mongodb.net:27017,ac-wlrzh8k-shard-00-01.a4x0r8e.mongodb.net:27017,ac-wlrzh8k-shard-00-02.a4x0r8e.mongodb.net:27017/newdetails?ssl=true&replicaSet=atlas-c0bja5-shard-0&authSource=admin&appName=Cluster0");
 let app = express();
-app.use(cors())
+app.use(cors());
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.post("/post", async (req, res) => {
