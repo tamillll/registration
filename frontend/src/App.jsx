@@ -18,21 +18,21 @@ function App() {
   let [newdata, setNew] = useState()
 
   function submit() {
-    axios.post("http://localhost:3000/post", {
+    axios.post("https://registration-2-40rp.onrender.com/post", {
       name, pass, email
     })
   }
   useEffect(() => {
-    axios.get("http://localhost:3000/read").then(d => setData(d.data))
+    axios.get("https://registration-2-40rp.onrender.com/read").then(d => setData(d.data))
   })
   function update(id) {
-    axios.put("http://localhost:3000/update", {
+    axios.put("https://registration-2-40rp.onrender.com/update", {
       id: id, name: newdata
     })
   }
   function dele(id) {
 
-    axios.delete(`http://localhost:3000/delete/${id}`)
+    axios.delete(`https://registration-2-40rp.onrender.com/delete/${id}`)
     console.log("delte")
 
   }
